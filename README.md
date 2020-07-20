@@ -2,13 +2,13 @@
 
 I am Palaash - A Full-Stack Developer 👨‍💻, Interaction Designer 👨‍🎨, and A Blockchain Developer 💰
 
-# Repositories Currently Working On :  
+### Repositories Currently Working On :  
 - [POC-Blockchain](https://netizener.github.io/POC-Blockchain/)
 - [OctoMov](https://netizener.github.io/OctoMov/)
 - [VidJot](https://netizener.github.io/VidJot/)
 - [YelpCamp](https://netizener.github.io/YelpCamp/)
 
-# About Me :   
+### About Me :   
 - I currently work as a freelancer on a contractual basis
 - Currently a student of BTech. in Computer Science with Specialization in Cloud Computing and Virtualization at DIT University
 - As a Full-Stack Developer, I work with Node.js (and currently learning React!)

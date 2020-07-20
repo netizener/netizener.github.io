@@ -1,3 +1,6 @@
+---
+title: "Palaash Atri"
+---
 # Hi there 👋
 
 I am Palaash - A Full-Stack Developer 👨‍💻, Interaction Designer 👨‍🎨, and A Blockchain Developer 💰

@@ -1,4 +1,4 @@
-# Hi there 👋
+<img src="download.png" alt="header image">
 
 I am Palaash - A Full-Stack Developer 👨‍💻, Interaction Designer 👨‍🎨, and A Blockchain Developer 💰
 

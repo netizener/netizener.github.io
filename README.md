@@ -13,6 +13,4 @@ I am Palaash - A Full-Stack Developer 👨‍💻, Interaction Designer 👨‍�
 - [Visual Studio Code](https://code.visualstudio.com/) is my lightsaber, and [elementary OS](https://elementary.io/) my Force 🤺
 > 🤓 [`Follow Me`](https://github.com/netizener) if you like my work! Or [DM me on LinkedIn](https://www.linkedin.com/in/palaasha/) if you'd like to collaborate!
 
-<div align = "center">
 ![Palaash's github stats](https://github-readme-stats.vercel.app/api?username=netizener&show_icons=true&theme=gruvbox)
-</div> 

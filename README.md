@@ -14,3 +14,9 @@ I am Palaash - A Full-Stack Developer 👨‍💻, Interaction Designer 👨‍�
 > 🤓 [`Follow Me`](https://github.com/netizener) if you like my work! Or [DM me on LinkedIn](https://www.linkedin.com/in/palaasha/) if you'd like to collaborate!
 
 ![Palaash's github stats](https://github-readme-stats.vercel.app/api?username=netizener&show_icons=true&theme=gruvbox)
+
+# Repositories : 
+- [POC-Blockchain](https://netizener.github.io/POC-Blockchain/)
+- [OctoMov](https://netizener.github.io/OctoMov/)
+- [VidJot](https://netizener.github.io/VidJot/)
+- [YelpCamp](https://netizener.github.io/YelpCamp/)

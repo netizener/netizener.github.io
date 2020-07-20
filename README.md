@@ -21,3 +21,11 @@ I am Palaash - A Full-Stack Developer 👨‍💻, Interaction Designer 👨‍�
 > 🤓 [`Follow Me`](https://github.com/netizener) if you like my work! Or [`Message me on LinkedIn`](https://www.linkedin.com/in/palaasha/) if you'd like to collaborate!
 
 ![Palaash's github stats](https://github-readme-stats.vercel.app/api?username=netizener&show_icons=true&theme=gruvbox)
+
+
+<a href="https://sourcerer.io/netizener"><img src="https://img.shields.io/badge/JavaScript-112%20commits-green.svg" alt=""></a>
+<a href="https://sourcerer.io/netizener"><img src="https://img.shields.io/badge/Java-42%20commits-red.svg" alt=""></a>
+<a href="https://sourcerer.io/netizener"><img src="https://img.shields.io/badge/C-34%20commits-purple.svg" alt=""></a>
+<a href="https://sourcerer.io/netizener"><img src="https://img.shields.io/badge/C++-38%20commits-blue.svg" alt=""></a>
+<a href="https://sourcerer.io/netizener"><img src="https://img.shields.io/badge/Python-36%20commits-yellow.svg" alt=""></a>
+<a href="https://sourcerer.io/netizener"><img src="https://img.shields.io/badge/Solidity-15%20commits-black.svg" alt=""></a>

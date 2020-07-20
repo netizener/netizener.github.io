@@ -1,8 +1,6 @@
-### Hi there 👋
+# Hi there 👋
 
 I am Palaash - A Full-Stack Developer 👨‍💻, Interaction Designer 👨‍🎨, and A Blockchain Developer 💰
-
-![Palaash's github stats](https://github-readme-stats.vercel.app/api?username=netizener&show_icons=true&theme=gruvbox)
   
 - A Full-Stack Developer, Interaction Designer, and A Blockchain Developer, I currently work as a freelancer on a contractual basis
 - Currently a student of BTech. in Computer Science with Specialization in Cloud Computing and Virtualization at DIT University
@@ -14,3 +12,7 @@ I am Palaash - A Full-Stack Developer 👨‍💻, Interaction Designer 👨‍�
 - Love to game and create videos over at my [YouTube Channel : myaimsucks](https://www.youtube.com/channel/UC37otLVs7Jlq5uL7t1czuvA)
 - [Visual Studio Code](https://code.visualstudio.com/) is my lightsaber, and [elementary OS](https://elementary.io/) my Force 🤺
 > 🤓 [`Follow Me`](https://github.com/netizener) if you like my work! Or [DM me on LinkedIn](https://www.linkedin.com/in/palaasha/) if you'd like to collaborate!
+
+<div align = "center">
+![Palaash's github stats](https://github-readme-stats.vercel.app/api?username=netizener&show_icons=true&theme=gruvbox)
+</div> 

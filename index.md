@@ -12,5 +12,4 @@ I am Palaash - A Full-Stack Developer 👨‍💻, Interaction Designer 👨‍�
 
 ![Palaash's github stats](https://github-readme-stats.vercel.app/api?username=netizener&show_icons=true)
 
-* Learn More * [About Me](/about)
-* Read * [My Blog!](/blog)
+* Learn More [About Me](/about)

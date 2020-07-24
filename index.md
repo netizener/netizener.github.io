@@ -8,5 +8,9 @@ I am Palaash - A Full-Stack Developer 👨‍💻, Interaction Designer 👨‍�
 - [VidJot](https://netizener.github.io/VidJot/)
 - [YelpCamp](https://netizener.github.io/YelpCamp/)
 
-###### Learn More [`About Me`](/about)
-###### Read [My Blog!](/blog)
+### Current Github Stats : 
+<div style = "center">
+![Palaash's github stats](https://github-readme-stats.vercel.app/api?username=netizener&show_icons=true&theme=gruvbox)
+</div>
+* Learn More * [About Me](/about)
+* Read * [My Blog!](/blog)

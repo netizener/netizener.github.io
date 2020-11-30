@@ -1,4 +1,116 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-30T23:25:58+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">thelocalhost</title><subtitle>A blog, of sorts? Read me rant or obsess on things I like and things I hate in tech.</subtitle><author><name>Palaash Atri</name><email>palaash.atri@gmail.com</email></author><entry><title type="html">The 5 minute blog tutorial…</title><link href="http://localhost:4000/2020/10/11/fastestblogtut.html" rel="alternate" type="text/html" title="The 5 minute blog tutorial…" /><published>2020-10-11T00:00:00+05:30</published><updated>2020-10-11T00:00:00+05:30</updated><id>http://localhost:4000/2020/10/11/fastestblogtut</id><content type="html" xml:base="http://localhost:4000/2020/10/11/fastestblogtut.html">&lt;p&gt;So, you want to create a blog and express your ideas with the world.. and you don’t know how to begin. Read how to make a quick 5-minute blog, from free hosting and domain to a free SSL certificate for a lifetime, here!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-01T01:14:31+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">thelocalhost</title><subtitle>A blog, of sorts? Read me rant or obsess on things I like and things I hate in tech.</subtitle><author><name>Palaash Atri</name><email>palaash.atri@gmail.com</email></author><entry><title type="html">You don’t need to struggle with Docker - builing a Node.js ‘Hello World’ Application with Docker</title><link href="http://localhost:4000/2020/12/01/nodedockerhw.html" rel="alternate" type="text/html" title="You don’t need to struggle with Docker - builing a Node.js ‘Hello World’ Application with Docker" /><published>2020-12-01T00:00:00+05:30</published><updated>2020-12-01T00:00:00+05:30</updated><id>http://localhost:4000/2020/12/01/nodedockerhw</id><content type="html" xml:base="http://localhost:4000/2020/12/01/nodedockerhw.html">&lt;p&gt;Docker is godsent! Want to seperate you developer environment from your main system? Dockerize it. Using bleeding edge technologies and don’t want them to mess up with your system libraries? Dockerize it. Using Linux but want to use Android binaries on it? &lt;a href=&quot;https://anbox.io/&quot;&gt;Dockerize it&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;so-what-is-docker&quot;&gt;So what is Docker?&lt;/h4&gt;
+&lt;p&gt;From the &lt;a href=&quot;https://docs.docker.com/get-started/overview/&quot;&gt;official docs&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;how-does-docker-work&quot;&gt;How does Docker work?&lt;/h4&gt;
+&lt;p&gt;Also from the &lt;a href=&quot;https://docs.docker.com/get-started/overview/&quot;&gt;official docs&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Docker provides the ability to package and run an application in a loosely isolated environment called a container….  Containers are lightweight because they don’t need the extra load of a hypervisor, but run directly within the host machine’s kernel. This means you can run more containers on a given hardware combination than if you were using virtual machines.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; Enough introduction, let's get straight to the point!&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&quot;working-with-docker-&quot;&gt;Working with Docker :&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;setting-up-the-developer-environment--installing-docker&quot;&gt;Setting up the developer environment &amp;amp; installing Docker:&lt;/h5&gt;
+    &lt;ul&gt;
+      &lt;li&gt;For Windows 10 :
+        &lt;blockquote&gt;
+          &lt;p&gt;This guide is specific to Windows 10 versions 1903+. Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;winver&lt;/code&gt; to check your Windows version, and ** UPDATE FIRST ** if necessary&lt;/p&gt;
+        &lt;/blockquote&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Enable the Windows Subsystem for Linux 2 (Windows 10 v. 1903+) :
+            &lt;ul&gt;
+              &lt;li&gt;Open a Powershell window as an Administrator (using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Win + X&lt;/code&gt; and selecting &lt;strong&gt;Powershell (Admin)&lt;/strong&gt; option) and type :
+                &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;                &lt;/div&gt;
+              &lt;/li&gt;
+              &lt;li&gt;Enable the Virtual Machine Feature using the Admin Powershell Window :
+                &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;                &lt;/div&gt;
+              &lt;/li&gt;
+              &lt;li&gt;Download the &lt;a href=&quot;https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi&quot;&gt;Linux Kernel Package for x64 machines&lt;/a&gt; and install the downloaded package&lt;/li&gt;
+              &lt;li&gt;Set WSL2 as the default version :
+                &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  wsl --set-default-version 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;                &lt;/div&gt;
+              &lt;/li&gt;
+              &lt;li&gt;You’re done setting up WSL2! For troubleshooting errors, refer to the &lt;a href=&quot;https://docs.microsoft.com/en-us/windows/wsl/troubleshooting&quot;&gt;WSL Troubleshooting Page&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;If everything till now happened smoothly, error-free, then &lt;a href=&quot;https://hub.docker.com/editions/community/docker-ce-desktop-windows/&quot;&gt;download Docker Desktop&lt;/a&gt; and install!&lt;/li&gt;
+              &lt;li&gt;You will be asked to restart your PC. Save your work, and restart.&lt;/li&gt;
+              &lt;li&gt;After your PC restarts, open up a command window and type : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run hello-world&lt;/code&gt; to get a ‘Hello World’ from Docker!&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;For Linux :
+        &lt;blockquote&gt;
+          &lt;p&gt;This guide is specific to Ubuntu. If you’re using any other Ubuntu-based distributions, change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$(lsb_release -cs)&lt;/code&gt; to your parent Ubuntu distribution. For other Linux distributions, follow the &lt;a href=&quot;https://docs.docker.com/engine/install/&quot;&gt;official docs&lt;/a&gt;&lt;/p&gt;
+        &lt;/blockquote&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Open up a terminal, and paste the following lines :
+            &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get remove docker docker-engine docker.io containerd runc
+  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
+  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;apt-transport-https ca-certificates curl gnupg-agent software-properties-common &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+  curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://download.docker.com/linux/ubuntu/gpg | &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-key add -
+  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-key fingerprint 0EBFCD88
+  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;add-apt-repository &lt;span class=&quot;s2&quot;&gt;&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;lsb_release &lt;span class=&quot;nt&quot;&gt;-cs&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; stable&quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
+  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;docker-ce docker-ce-cli containerd.io &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;groupadd docker
+  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;usermod &lt;span class=&quot;nt&quot;&gt;-aG&lt;/span&gt; docker &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Before continuing further, save your work, and then restart using: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo reboot&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;After your PC restarts, open up a terminal and type : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run hello-world&lt;/code&gt; to get a ‘Hello World’ from Docker!&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;building-the-nodejs-application&quot;&gt;Building the Nodejs application:&lt;/h5&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Create a file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.js&lt;/code&gt; and add the following lines of code :
+        &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello World!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+      &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
+  &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+        &lt;p&gt;This creates a simple ‘Hello World’ application in Node.js using the inbuilt &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http&lt;/code&gt; module&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; in the &lt;strong&gt;&lt;em&gt;same&lt;/em&gt;&lt;/strong&gt; directory and add the following lines of code :
+        &lt;pre&gt;&lt;code class=&quot;language-Dockerfile&quot;&gt;  FROM node:12
+  CMD [&quot;node&quot;,&quot;app.js&quot;]
+  COPY app.js /app.js
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Open a terminal and type the following lines to build the docker image:
+        &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  docker image build &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; node-hello-world &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h5 id=&quot;testing-the-nodejs-application&quot;&gt;Testing the Nodejs application:&lt;/h5&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Open up a terminal and type :
+        &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  docker run &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8080:8080 &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; node-hello-world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Fire up a browser and go to &lt;a href=&quot;http://localhost:8080&quot;&gt;localhost:8080&lt;/a&gt; to see our application in action!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Congrats on building your Nodejs “Hello World” application using Docker!&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Don’t want to code? &lt;a href=&quot;https://github.com/netizener/docker-node&quot;&gt;Clone this repository&lt;/a&gt; and follow the instructions in the README!&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Palaash Atri</name><email>palaash.atri@gmail.com</email></author><summary type="html">Docker is godsent! Want to seperate you developer environment from your main system? Dockerize it. Using bleeding edge technologies and don’t want them to mess up with your system libraries? Dockerize it. Using Linux but want to use Android binaries on it? Dockerize it</summary></entry><entry><title type="html">The 5 minute blog tutorial…</title><link href="http://localhost:4000/2020/10/11/fastestblogtut.html" rel="alternate" type="text/html" title="The 5 minute blog tutorial…" /><published>2020-10-11T00:00:00+05:30</published><updated>2020-10-11T00:00:00+05:30</updated><id>http://localhost:4000/2020/10/11/fastestblogtut</id><content type="html" xml:base="http://localhost:4000/2020/10/11/fastestblogtut.html">&lt;p&gt;So, you want to create a blog and express your ideas with the world.. and you don’t know how to begin. Read how to make a quick 5-minute blog, from free hosting and domain to a free SSL certificate for a lifetime, here!&lt;/p&gt;
 
 &lt;p&gt;If you’re lazy, like me, or you don’t like to code, but would like to have your own blog that has exceptionally fast loading speeds and is easy to setup, you’re reading the most easiest blog setup tutorial you’ll ever see. Now now, I don’t technically hate services like wordpress.com or one of those site builders such as wix, but I have found in general usage that I just don’t like having a lot of URLs for things I use, and I rather prefer a static site generator such as Jekyll/Hugo or Gatsby because I prefer my sites FAST.&lt;/p&gt;
 

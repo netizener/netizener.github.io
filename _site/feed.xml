@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-30T22:51:11+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">thelocalhost</title><subtitle>A blog, of sorts? Read me rant or obsess on things I like and things I hate in tech.</subtitle><author><name>Palaash Atri</name><email>palaash.atri@gmail.com</email></author><entry><title type="html">The 5 minute blog tutorial…</title><link href="http://localhost:4000/git/technology/github/blogging/tutorial/2020/10/11/fastestblogtut.html" rel="alternate" type="text/html" title="The 5 minute blog tutorial…" /><published>2020-10-11T00:00:00+05:30</published><updated>2020-10-11T00:00:00+05:30</updated><id>http://localhost:4000/git/technology/github/blogging/tutorial/2020/10/11/fastestblogtut</id><content type="html" xml:base="http://localhost:4000/git/technology/github/blogging/tutorial/2020/10/11/fastestblogtut.html">&lt;p&gt;So, you want to create a blog and express your ideas with the world.. and you don’t know how to begin. Read how to make a quick 5-minute blog, from free hosting and domain to a free SSL certificate for a lifetime, here!&lt;/p&gt;
+
+&lt;p&gt;If you’re lazy, like me, or you don’t like to code, but would like to have your own blog that has exceptionally fast loading speeds and is easy to setup, you’re reading the most easiest blog setup tutorial you’ll ever see. Now now, I don’t technically hate services like wordpress.com or one of those site builders such as wix, but I have found in general usage that I just don’t like having a lot of URLs for things I use, and I rather prefer a static site generator such as Jekyll/Hugo or Gatsby because I prefer my sites FAST.&lt;/p&gt;
+
+&lt;p&gt;I’ll not explain what static site generator is in this post, but this blogpost is basically a quick start guide to running your own blog as fast as humanely possible. So let’s get started, shall we?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;step-1--get-a-github-account-&quot;&gt;Step 1 : Get a GitHub Account :&lt;/h2&gt;
+    &lt;p&gt;If you don’t already have a GitHub account, sign up for one &lt;a href=&quot;https://www.github.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;step-2--set-up-the-developer-environment&quot;&gt;Step 2 : Set up the developer environment&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;We will be using Jekyll SSG for this tutorial. Follow the developer environment setup guide &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Download Git &lt;a href=&quot;https://git-scm.com/&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;step-3--download-the-quick-start-repository-&quot;&gt;Step 3 : Download the quick-start repository :&lt;/h2&gt;
+    &lt;p&gt;Now, if you want to create your blog like mine, with a Minima-Dark theme and everything, download the repository &lt;a href=&quot;https://github.com/netizener/thelocalhost&quot;&gt;here&lt;/a&gt;. Otherwise, if you’d like to use the default Jekyll blog, with Minima light theme, open up a terminal and paste the following code :&lt;/p&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
+  jekyll new myblog
+  &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myblog
+  bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;step-4--viewing-the-blogsite-&quot;&gt;Step 4 : Viewing the blogsite :&lt;/h2&gt;
+    &lt;p&gt;Open up your favorite web browser and follow the link &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:4000/&lt;/code&gt; to watch the website in action&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;step-5--addingremoving-new-posts-&quot;&gt;Step 5 : Adding/Removing new posts :&lt;/h2&gt;
+    &lt;p&gt;All your posts and stored in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Use the format &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-TITLE.md&lt;/code&gt; to create new posts.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;step-6--customizing-the-blogsite-&quot;&gt;Step 6 : Customizing the blogsite :&lt;/h2&gt;
+    &lt;p&gt;Your blogsite can be customized from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file. If you downloaded &lt;a href=&quot;https://github.com/netizener/thelocalhost&quot;&gt;my quick start repository&lt;/a&gt;, you can read how to customize the blogsite by reading the &lt;a href=&quot;https://github.com/netizener/thelocalhost/tree/main#customizing-the-blog-&quot;&gt;customization guide&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;step-7--deploying-the-blogsite-&quot;&gt;Step 7 : Deploying the blogsite :&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Delete the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git&lt;/code&gt; folder inside the repository&lt;/li&gt;
+      &lt;li&gt;Create a new repository on GitHub with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yourusername.github.io&lt;/code&gt; where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yourusername&lt;/code&gt; is your GitHub username&lt;/li&gt;
+      &lt;li&gt;Fire up a terminal in the current project directory and follow the following commands (make sure you have Git installed):
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  git 
+  git init
+  git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+  git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;first commit&quot;&lt;/span&gt;
+  git branch &lt;span class=&quot;nt&quot;&gt;-M&lt;/span&gt; main
+  git remote add origin git@github.com:yourusername/yourusername.github.io.git
+  git push &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; origin main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Let the upload finish. Meanwhile open up your repository’s settings and change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Source&lt;/code&gt; under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GitHub Pages&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt;. Wait for 5-10 minutes for the first publish of the blogsite to finish, and then visit your blogsite at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yourusername.github.io&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;happy-blogging&quot;&gt;Happy Blogging!&lt;/h3&gt;</content><author><name>Palaash Atri</name><email>palaash.atri@gmail.com</email></author><category term="git" /><category term="technology" /><category term="github" /><category term="blogging" /><category term="tutorial" /><summary type="html">So, you want to create a blog and express your ideas with the world.. and you don’t know how to begin. Read how to make a quick 5-minute blog, from free hosting and domain to a free SSL certificate for a lifetime, here!</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/hello/world/2020/10/07/helloworld.html" rel="alternate" type="text/html" title="Hello World" /><published>2020-10-07T00:00:00+05:30</published><updated>2020-10-07T00:00:00+05:30</updated><id>http://localhost:4000/hello/world/2020/10/07/helloworld</id><content type="html" xml:base="http://localhost:4000/hello/world/2020/10/07/helloworld.html">&lt;p&gt;As they want us to say, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;HELLO WORLD!&quot;&lt;/code&gt;&lt;/p&gt;</content><author><name>Palaash Atri</name><email>palaash.atri@gmail.com</email></author><category term="hello" /><category term="world" /><summary type="html">As they want us to say, &quot;HELLO WORLD!&quot;</summary></entry><entry><title type="html">You aren’t the ‘master’ anymore…</title><link href="http://localhost:4000/git/technology/github/discussion/2020/10/07/no-master.html" rel="alternate" type="text/html" title="You aren’t the ‘master’ anymore…" /><published>2020-10-07T00:00:00+05:30</published><updated>2020-10-07T00:00:00+05:30</updated><id>http://localhost:4000/git/technology/github/discussion/2020/10/07/no-master</id><content type="html" xml:base="http://localhost:4000/git/technology/github/discussion/2020/10/07/no-master.html">&lt;p&gt;Some of you know about &lt;a href=&quot;https://en.wikipedia.org/wiki/George_Floyd&quot;&gt;George Floyd&lt;/a&gt;, some of you don’t. Anyways, May 2020 was an extremely tense month for everyone in the world, from massive violent protests to an extreme surge in COVID-19 cases, it turned out to be one of the busiest and worst months of 2020 and changed a lot of things that we knew about in the world.&lt;/p&gt;
+
+&lt;p&gt;The whole event and its aftermath can be read &lt;a href=&quot;https://en.wikipedia.org/wiki/Killing_of_George_Floyd&quot;&gt;here on Wikipedia&lt;/a&gt;, and I won’t be delving into anything related to racial discrimination and any of the “#BlackLivesMatter” movement, and keep this section pretty much controversy-free.&lt;/p&gt;
+
+&lt;p&gt;Speaking of controversy-free, GitHub recently changed their branch naming convention, and “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt;” branches are now renamed to “&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt;” in all new repositories, which serves as the default branch of all repositories on GitHub. According to &lt;a href=&quot;https://sfconservancy.org/news/2020/jun/23/gitbranchname/&quot;&gt;this article&lt;/a&gt;,&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“Both Conservancy and the Git project are aware that the initial branch name, ‘master’, is offensive to some people and we empathize with those hurt by the use of that term.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;and its pretty sure inspired by racial-activists being offended by the old “master-slave” naming convention used in computer architectures since decades. I kind of understand their sentiments, but it isn’t that easy to change your muscle memory from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push origin master&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push origin main&lt;/code&gt; in one fell swoop.&lt;/p&gt;
+
+&lt;p&gt;Still, I think its a good change, and I would request developers to check their repositories whether they refer to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt; or the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; branch and avoid any unforeseen technical challenges and difficulties they might face due to the change in the naming convention, using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git status&lt;/code&gt;. Its a handy tool, and will always help you cross-check your git repository’s status.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/github/renaming&quot;&gt;Read more about the change in the naming convention here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;happy-coding&quot;&gt;Happy Coding!&lt;/h3&gt;</content><author><name>Palaash Atri</name><email>palaash.atri@gmail.com</email></author><category term="git" /><category term="technology" /><category term="github" /><category term="discussion" /><summary type="html">Some of you know about George Floyd, some of you don’t. Anyways, May 2020 was an extremely tense month for everyone in the world, from massive violent protests to an extreme surge in COVID-19 cases, it turned out to be one of the busiest and worst months of 2020 and changed a lot of things that we knew about in the world.</summary></entry></feed>

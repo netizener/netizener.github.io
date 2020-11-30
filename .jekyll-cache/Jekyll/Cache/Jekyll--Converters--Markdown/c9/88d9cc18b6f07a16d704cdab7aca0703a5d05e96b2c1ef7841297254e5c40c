@@ -1,0 +1,61 @@
+I"�<p>So, you want to create a blog and express your ideas with the world.. and you don’t know how to begin. Read how to make a quick 5-minute blog, from free hosting and domain to a free SSL certificate for a lifetime, here!</p>
+
+<p>If you’re lazy, like me, or you don’t like to code, but would like to have your own blog that has exceptionally fast loading speeds and is easy to setup, you’re reading the most easiest blog setup tutorial you’ll ever see. Now now, I don’t technically hate services like wordpress.com or one of those site builders such as wix, but I have found in general usage that I just don’t like having a lot of URLs for things I use, and I rather prefer a static site generator such as Jekyll/Hugo or Gatsby because I prefer my sites FAST.</p>
+
+<p>I’ll not explain what static site generator is in this post, but this blogpost is basically a quick start guide to running your own blog as fast as humanely possible. So let’s get started, shall we?</p>
+
+<ul>
+  <li>
+    <h2 id="step-1--get-a-github-account-">Step 1 : Get a GitHub Account :</h2>
+    <p>If you don’t already have a GitHub account, sign up for one <a href="https://www.github.com/">here</a></p>
+  </li>
+  <li>
+    <h2 id="step-2--set-up-the-developer-environment">Step 2 : Set up the developer environment</h2>
+    <ul>
+      <li>We will be using Jekyll SSG for this tutorial. Follow the developer environment setup guide <a href="https://jekyllrb.com/docs/installation/">here</a></li>
+      <li>Download Git <a href="https://git-scm.com/">here</a></li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="step-3--download-the-quick-start-repository-">Step 3 : Download the quick-start repository :</h2>
+    <p>Now, if you want to create your blog like mine, with a Minima-Dark theme and everything, download the repository <a href="https://github.com/netizener/thelocalhost">here</a>. Otherwise, if you’d like to use the default Jekyll blog, with Minima light theme, open up a terminal and paste the following code :</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  gem <span class="nb">install </span>jekyll bundler
+  jekyll new myblog
+  <span class="nb">cd </span>myblog
+  bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h2 id="step-4--viewing-the-blogsite-">Step 4 : Viewing the blogsite :</h2>
+    <p>Open up your favorite web browser and follow the link <code class="language-plaintext highlighter-rouge">http://localhost:4000/</code> to watch the website in action</p>
+  </li>
+  <li>
+    <h2 id="step-5--addingremoving-new-posts-">Step 5 : Adding/Removing new posts :</h2>
+    <p>All your posts and stored in the <code class="language-plaintext highlighter-rouge">_posts</code> directory. Use the format <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-TITLE.md</code> to create new posts.</p>
+  </li>
+  <li>
+    <h2 id="step-6--customizing-the-blogsite-">Step 6 : Customizing the blogsite :</h2>
+    <p>Your blogsite can be customized from the <code class="language-plaintext highlighter-rouge">_config.yml</code> file. If you downloaded <a href="https://github.com/netizener/thelocalhost">my quick start repository</a>, you can read how to customize the blogsite by reading the <a href="https://github.com/netizener/thelocalhost/tree/main#customizing-the-blog-">customization guide</a></p>
+  </li>
+  <li>
+    <h2 id="step-7--deploying-the-blogsite-">Step 7 : Deploying the blogsite :</h2>
+    <ul>
+      <li>Delete the <code class="language-plaintext highlighter-rouge">.git</code> folder inside the repository</li>
+      <li>Create a new repository on GitHub with <code class="language-plaintext highlighter-rouge">yourusername.github.io</code> where <code class="language-plaintext highlighter-rouge">yourusername</code> is your GitHub username</li>
+      <li>Fire up a terminal in the current project directory and follow the following commands (make sure you have Git installed):
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git 
+  git init
+  git add <span class="nb">.</span>
+  git commit <span class="nt">-m</span> <span class="s2">"first commit"</span>
+  git branch <span class="nt">-M</span> main
+  git remote add origin git@github.com:yourusername/yourusername.github.io.git
+  git push <span class="nt">-u</span> origin main
+</code></pre></div>        </div>
+      </li>
+      <li>Let the upload finish. Meanwhile open up your repository’s settings and change <code class="language-plaintext highlighter-rouge">Source</code> under <code class="language-plaintext highlighter-rouge">GitHub Pages</code> to <code class="language-plaintext highlighter-rouge">master</code>. Wait for 5-10 minutes for the first publish of the blogsite to finish, and then visit your blogsite at <code class="language-plaintext highlighter-rouge">yourusername.github.io</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="happy-blogging">Happy Blogging!</h3>
+:ET

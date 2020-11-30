@@ -8,3 +8,5 @@ layout: home
 
 # `netizener` :  Palaash Atri 
 > A Full-Stack Developer, Interaction Designer, and A Blockchain Developer
+
+<center>Read My Views</center>

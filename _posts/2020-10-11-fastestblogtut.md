@@ -2,7 +2,6 @@
 layout: post
 title:  "The 5 minute blog tutorial..."
 date:   2020-10-11 
-categories: git technology github blogging tutorial
 ---
 So, you want to create a blog and express your ideas with the world.. and you don't know how to begin. Read how to make a quick 5-minute blog, from free hosting and domain to a free SSL certificate for a lifetime, here!
 
